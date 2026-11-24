@@ -1,0 +1,44 @@
+name,primary_domain,category,route
+Google 搜索,google.com,搜索,PROXY
+YouTube,youtube.com,视频,PROXY
+Gmail,gmail.com,邮箱,PROXY
+Google Drive,drive.google.com,云盘,PROXY
+Google Maps,maps.google.com,地图,PROXY
+Microsoft,microsoft.com,软件,PROXY
+Bing,bing.com,搜索,PROXY
+Outlook,outlook.com,邮箱,PROXY
+Microsoft 365,office.com,办公,PROXY
+Apple,apple.com,软件/硬件,PROXY
+iCloud,icloud.com,云服务,PROXY
+GitHub,github.com,代码托管,PROXY
+OpenAI,openai.com,AI,PROXY
+ChatGPT,chatgpt.com,AI,PROXY
+Claude,claude.ai,AI,PROXY
+Gemini,gemini.google.com,AI,PROXY
+X / Twitter,x.com,社交,PROXY
+Facebook,facebook.com,社交,PROXY
+Instagram,instagram.com,社交,PROXY
+Threads,threads.net,社交,PROXY
+WhatsApp,whatsapp.com,通讯,PROXY
+Telegram,telegram.org,通讯,PROXY
+Discord,discord.com,社区/语音,PROXY
+Reddit,reddit.com,社区,PROXY
+Pinterest,pinterest.com,内容社区,PROXY
+TikTok,tiktok.com,短视频,PROXY
+Netflix,netflix.com,流媒体,PROXY
+Disney+,disneyplus.com,流媒体,PROXY
+Prime Video,primevideo.com,流媒体,PROXY
+HBO Max,max.com,流媒体,PROXY
+Spotify,spotify.com,音乐,PROXY
+Steam,steampowered.com,游戏,PROXY
+Epic Games,epicgames.com,游戏,PROXY
+PlayStation,playstation.com,游戏,PROXY
+Xbox,xbox.com,游戏,PROXY
+Nintendo,nintendo.com,游戏,PROXY
+PayPal,paypal.com,支付,PROXY
+Stripe,stripe.com,支付,PROXY
+Binance,binance.com,交易,PROXY
+Adobe,adobe.com,软件,PROXY
+Figma,figma.com,设计,PROXY
+Notion,notion.so,办公,PROXY
+Slack,slack.com,办公,PROXY

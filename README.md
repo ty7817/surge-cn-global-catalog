@@ -6,13 +6,13 @@
 
 | 文件 | 内容 | 数量 |
 |---|---|---:|
-| `data/domains-cn.txt` | 国内规则集域名（China_All 去重） | 3700 |
-| `data/domains-global.txt` | 国外规则集域名（主要国外服务规则集并集） | 6013 |
-| `data/domains-overlap.txt` | 同时出现在国内/国外规则集的域名 | 36 |
-| `data/domains-cn-exclusive.txt` | 仅国内清单 | 3664 |
-| `data/domains-global-exclusive.txt` | 仅国外清单 | 5977 |
-| `rules/china-all.list` | 原始 China_All 规则 | 3763 行 |
-| `rules/global-all.list` | 国外域名统一为 `DOMAIN-SUFFIX` 的规则 | 6013 行 |
+| `domains-cn.txt` | 国内规则集域名（China_All 去重） | 3700 |
+| `domains-global.txt` | 国外规则集域名（主要国外服务规则集并集） | 6013 |
+| `domains-overlap.txt` | 同时出现在国内/国外规则集的域名 | 36 |
+| `domains-cn-exclusive.txt` | 仅国内清单 | 3664 |
+| `domains-global-exclusive.txt` | 仅国外清单 | 5977 |
+| `china-all.list` | 原始 China_All 规则 | 3763 行 |
+| `global-all.list` | 国外域名统一为 `DOMAIN-SUFFIX` 的规则 | 6013 行 |
 
 > 数量按“唯一域名”统计；原始规则文件可能包含 `DOMAIN`、`DOMAIN-SUFFIX`、`DOMAIN-KEYWORD`。
 
@@ -22,18 +22,18 @@
 
 ```ini
 # 国内直连
-RULE-SET,https://raw.githubusercontent.com/ty7817/surge-cn-global-catalog/main/rules/china-all.list,DIRECT,no-resolve
+RULE-SET,https://raw.githubusercontent.com/ty7817/surge-cn-global-catalog/main/china-all.list,DIRECT,no-resolve
 # 国外兜底：建议换成你的主节点或对应服务组，不要无脑全塞主节点
-RULE-SET,https://raw.githubusercontent.com/ty7817/surge-cn-global-catalog/main/rules/global-all.list,主节点,no-resolve
+RULE-SET,https://raw.githubusercontent.com/ty7817/surge-cn-global-catalog/main/global-all.list,主节点,no-resolve
 ```
 
 `global-all.list` 是“国外规则集并集”，里面包含 Apple / Microsoft / Google / 流媒体 / 游戏 / AI 等不同服务。正式使用时，最好按服务拆到对应策略组，或者只用它做检索，不要直接当成一个整体策略。
 
 ### 2. 作为目录检索
 
-- 查某个域名属于国内还是国外清单：在 `data/domains-cn.txt` / `data/domains-global.txt` 中搜索。
-- 查重叠域名：`data/domains-overlap.txt`。这些通常是国际版服务、跨国厂商的中国入口，或者规则集本身的历史重叠，需要按实际产品判断。
-- App 分类说明见 `docs/`。
+- 查某个域名属于国内还是国外清单：在 `domains-cn.txt` / `domains-global.txt` 中搜索。
+- 查重叠域名：`domains-overlap.txt`。这些通常是国际版服务、跨国厂商的中国入口，或者规则集本身的历史重叠，需要按实际产品判断。
+- App 分类说明见 `cn-apps.md` / `global-apps.md`。
 
 ## 重要说明
 
@@ -46,8 +46,9 @@ RULE-SET,https://raw.githubusercontent.com/ty7817/surge-cn-global-catalog/main/r
 ## 目录
 
 ```text
-data/                 国内外域名清单与重叠清单
-rules/                Surge 可用的域名规则
-docs/                 常用网站/软件分类说明
-SOURCES.md            上游规则集地址
+domains-cn.txt / domains-global.txt        国内外域名清单
+domains-overlap.txt / *-exclusive.txt      重叠与独有清单
+china-all.list / global-all.list           Surge 可用的域名规则
+cn-apps.md / global-apps.md                常用网站/软件分类说明
+SOURCES.md / SOURCES.json                  上游规则集地址
 ```
